@@ -4,12 +4,14 @@ import Header from "./Components/Header";
 import { ReviewList } from "./Components/ReviewList";
 import { useState } from "react";
 import Home from "./Components/Home";
+import { Nav } from "./Components/Nav";
 
 function App() {
   const [reviews, setReviews] = useState([]);
   return (
     <div className="App">
       <Header />
+      <Nav />
       <Routes>
         <Route
           path="/"
