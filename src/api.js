@@ -9,8 +9,3 @@ export const getReviews = () => {
     return data.reviews;
   });
 };
-export const getReviewById = (review_id) => {
-  return reviewsApi.get(`/reviews/${review_id}`).then(({ data }) => {
-    return data.review;
-  });
-};

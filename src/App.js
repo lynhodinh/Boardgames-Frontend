@@ -5,7 +5,6 @@ import { ReviewList } from "./Components/ReviewList";
 import { useState } from "react";
 import Home from "./Components/Home";
 import { Nav } from "./Components/Nav";
-import { SingleReview } from "./Components/SingleReview";
 
 function App() {
   const [reviews, setReviews] = useState([]);
@@ -18,8 +17,8 @@ function App() {
           path="/"
           element={<Home setReviews={setReviews} reviews={reviews} />}
         />
+
         <Route path="/reviews" element={<ReviewList />} />
-        <Route path="/reviews/:review_id" element={<SingleReview />} />
       </Routes>
     </div>
   );
