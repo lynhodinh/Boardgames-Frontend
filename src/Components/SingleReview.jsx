@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import  {getReviewById}  from "../api";
+import {CommentList} from "./CommentList";
 
 export const SingleReview = () => {
     const [review, setReview] = useState([]);
@@ -21,6 +22,9 @@ export const SingleReview = () => {
           <p className="mb-4">{review.review_body}</p>
           <p className="text-gray-600 mb-2">Votes: {review.votes}</p>
         </div>
+        <section>
+        <CommentList review_id={review_id} />
+      </section>
       </section>
     );
   };
