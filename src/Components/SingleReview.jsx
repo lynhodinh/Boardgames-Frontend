@@ -51,7 +51,7 @@ export const SingleReview = () => {
           <button
             onClick={addVote}
             disabled={hasClicked}
-            className="border border-gray-400 rounded-full px-3 py-2 flex items-center justify-center hover:bg-gray-100 transition duration-200 ease-in-out"
+            className="border border-gray-400 rounded-full px-3 py-2 flex items-center justify-center hover:bg-gray-100 transition duration-200 ease-in-out transform hover:-translate-y-1 "
           >
             <FontAwesomeIcon
               icon={faThumbsUp}
