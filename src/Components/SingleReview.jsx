@@ -7,7 +7,6 @@ export const SingleReview = () => {
     const { review_id } = useParams();
   
     useEffect(() => {
-      console.log(review_id,"review-id")
       getReviewById(review_id).then((review) => {
         setReview(review);
       });
@@ -20,8 +19,7 @@ export const SingleReview = () => {
           <h4 className="text-lg font-medium mb-2">Review Owner: {review.owner}</h4>
           <p className="mb-4">{review.review_body}</p>
           <p className="text-gray-600 mb-2">Votes: {review.votes}</p>
-          <p className="text-gray-600 mb-2">Comment Count: {review.comment_count}</p>
-        </div>
+        </div> 
       </section>
     );
   };
