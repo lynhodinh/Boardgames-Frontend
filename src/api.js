@@ -4,9 +4,17 @@ const reviewsApi = axios.create({
   baseURL: "https://nc-board-game-reviews.onrender.com/api",
 });
 
-export const getReviews = () => {
-  return reviewsApi.get(`/reviews`).then(({ data }) => {
-    return data.reviews;
+export const getReviews = (category) => {
+  return reviewsApi
+    .get(`/reviews`, { params: { category: category } })
+    .then(({ data }) => {
+      console.log(category);
+      return data.reviews;
+    });
+};
+export const getCategories = () => {
+  return reviewsApi.get("/categories").then(({ data }) => {
+    return data.categories;
   });
 };
 export const getReviewById = (review_id) => {
