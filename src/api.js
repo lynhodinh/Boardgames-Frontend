@@ -8,7 +8,6 @@ export const getReviews = (category) => {
   return reviewsApi
     .get(`/reviews`, { params: { category: category } })
     .then(({ data }) => {
-      console.log(category);
       return data.reviews;
     });
 };
