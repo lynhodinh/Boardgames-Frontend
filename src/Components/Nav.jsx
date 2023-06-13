@@ -1,9 +1,10 @@
-const { Link } = require("react-router-dom");
+import { Link } from "react-router-dom";
+import { CategoriesNav } from "./Categories";
 
 export const Nav = () => {
   return (
-    <nav>
-      <ul className="flex">
+    <nav className="sticky top-0 bg-gray-800 py-4 z-10">
+      <ul className="flex justify-center">
         <li className="mr-4">
           <Link
             to="/"
@@ -28,8 +29,8 @@ export const Nav = () => {
             Write A Review
           </Link>
         </li>
+        <li>{/* <CategoriesNav /> */}</li>
       </ul>
     </nav>
   );
 };
-
