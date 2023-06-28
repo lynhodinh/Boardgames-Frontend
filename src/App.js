@@ -5,6 +5,7 @@ import { useState } from "react";
 import Home from "./Components/Home";
 import { Nav } from "./Components/Nav";
 import { SingleReview } from "./Components/SingleReview";
+import { CategoriesNav } from "./Components/Categories";
 
 function App() {
   return (
@@ -29,6 +30,14 @@ function App() {
           }
         ></Route>
         <Route path="/reviews/:review_id" element={<SingleReview />} />
+        <Route
+          path="/categories"
+          element={
+            <div>
+              <CategoriesNav />
+            </div>
+          }
+        ></Route>
       </Routes>
     </div>
   );
