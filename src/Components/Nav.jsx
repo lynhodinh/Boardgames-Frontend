@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { CategoriesNav } from "./Categories";
 
 export const Nav = () => {
   return (
@@ -10,14 +11,6 @@ export const Nav = () => {
             className="text-white hover:text-gray-300 font-medium text-lg"
           >
             Home
-          </Link>
-        </li>
-        <li className="mr-4">
-          <Link
-            to="/categories"
-            className="text-white hover:text-gray-300 font-medium text-lg"
-          >
-            Categories
           </Link>
         </li>
         <li className="mr-4">
@@ -36,6 +29,7 @@ export const Nav = () => {
             Write A Review
           </Link>
         </li>
+        <li>{/* <CategoriesNav /> */}</li>
       </ul>
     </nav>
   );
