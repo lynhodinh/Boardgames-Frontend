@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { ReviewCard } from "./ReviewCard";
 import { getReviews } from "../api";
 import { useSearchParams } from "react-router-dom";
-import { CategoriesNav } from "./Categories";
 
 export const ReviewList = () => {
   const [reviews, setReviews] = useState([]);
