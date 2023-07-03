@@ -25,10 +25,14 @@ export const ReviewList = () => {
     ? reviews.filter((review) => review.category === category)
     : reviews;
 
+  const capitalizedCategory = category
+    ? category.charAt(0).toUpperCase() + category.slice(1)
+    : "All Reviews";
+
   return (
     <article className="container mx-auto py-6">
       <h2 className="text-3xl font-bold mb-4 flex items-center justify-center h-full">
-        Review List
+        {capitalizedCategory}
       </h2>
 
       {isLoading ? (
